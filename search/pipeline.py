@@ -131,7 +131,7 @@ class PipelineConfig:
     def __init__(self):
         self.gpu:          GPUSpec       = None
         self.families:     List[str]     = []      # [] = all
-        self.total_archs:  int           = 1000    # Range
+        self.total_archs:  int           = 300    # Range
         self.n_per_family: int           = 0       # dihitung dari total_archs
         self.seed:         int           = 42
         self.run_profiling: bool         = True    # auto real profiling
@@ -310,17 +310,17 @@ def _select_range() -> int:
         try:
             raw = input("Range    : ").strip()
         except (KeyboardInterrupt, EOFError):
-            return 1000
+            return 300
 
         if not raw:
-            console.print("[yellow]  Default: 1000[/yellow]\n")
-            return 1000
+            console.print("[yellow]  Default: 300[/yellow]\n")
+            return 300
 
         try:
             val = int(raw.replace(",", "").replace(".", ""))
-            if val < 1000:
-                console.print(f"[yellow]  Minimum 1000. Set ke 1000.[/yellow]\n")
-                return 1000
+            if val < 300:
+                console.print(f"[yellow]  Minimum 300. Set ke 300.[/yellow]\n")
+                return 300
             if val > 100000:
                 console.print(f"[yellow]  Maximum 100000. Set ke 100000.[/yellow]\n")
                 return 100000
