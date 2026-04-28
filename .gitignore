@@ -1,0 +1,11 @@
+ __pycache__/
+*.py[cod]
+*$py.class
+
+.DS_Store
+Thumbs.db
+
+arch_analysis_v5_*.json
+*.log
+.venv/
+env/
