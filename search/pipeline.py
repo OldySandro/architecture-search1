@@ -43,7 +43,7 @@ import time
 from typing import Dict, List, Optional, Tuple
 
 # ── Path setup — tambahkan direktori multi-type ke sys.path ──────────────────
-_BASE_DIR = "/storage/emulated/0/Download/architecture-search1/search/multi-type"
+_BASE_DIR = "/content/architecture-search1/search/multi-type"
 if _BASE_DIR not in sys.path:
     sys.path.insert(0, _BASE_DIR)
 
